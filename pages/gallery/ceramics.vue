@@ -4,8 +4,8 @@
       <div class="card">
         <button @click="showModal(index)">
           <img :src="image.path" :alt="image.alt" />
+          <p class="py-2">{{ image.description }}</p>
         </button>
-        <!-- <p>{{ image.description }}</p> -->
       </div>
     </div>
   </div>
@@ -13,7 +13,7 @@
   <!-- TODO: move image slider into components later -->
   <!-- modal -->
   <div class="modal-slider-wrapper" v-show="modalActive">
-    <div class="modal-slider">
+    <div class="modal-slider px-0 sm:px-20">
       <button class="slider-control right close" @click="closeModal">
         <Icon name="ep:close" size="30px" />
       </button>
@@ -61,7 +61,6 @@ export default {
   methods: {
     showModal(i) {
       this.currentSlide = i;
-      console.log(`This.currentSlide: ${this.currentSlide}`);
       if (this.modalActive === false) {
         this.modalActive = true
       }
@@ -96,21 +95,18 @@ export default {
 }
 
 .modal-slider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 10%;
-  padding-right: 10%;
   background-color: black;
 }
 
 .modal-slider-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: calc(100vh);
 }
 
 .modal-slider-item img {
-  max-width: 100%; 
-  height: 100%;
+  max-height: 100%;
 }
 
 .slider-control {
@@ -120,7 +116,6 @@ export default {
   cursor: pointer;
   width: 50px;
   height: 50px;
-  transition: opacity .2s;
 }
 
 .close {

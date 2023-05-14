@@ -44,3 +44,6 @@ dist/
 .cache
 .output
 .env
+
+#
+public/
