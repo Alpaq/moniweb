@@ -14,13 +14,13 @@
   <!-- modal -->
   <div class="modal-slider-wrapper" v-show="modalActive">
     <div class="modal-slider px-0 sm:px-20">
-      <button class="slider-control right close" @click="closeModal">
+      <button class="slider-control right close text-white" @click="closeModal">
         <Icon name="ep:close" size="30px" />
       </button>
-      <button class="slider-control left" @click="showPrevious">
+      <button class="slider-control left text-transparent sm:text-white" @click="showPrevious">
         <Icon name="ep:arrow-left" size="30px" />
       </button>
-      <button class="slider-control right" @click="showNext">
+      <button class="slider-control right text-transparent sm:text-white" @click="showNext">
         <Icon name="ep:arrow-right" size="30px" />
       </button>
       <div class="modal-slider-item" 
@@ -112,7 +112,6 @@ export default {
 .slider-control {
   position: absolute;
   top: calc(50%);
-  color: white;
   cursor: pointer;
   width: 50px;
   height: 50px;
