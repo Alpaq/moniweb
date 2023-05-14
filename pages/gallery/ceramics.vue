@@ -31,6 +31,7 @@
         :currentSlide="currentSlide" 
         :index="index">
         <img :src="image.path" />
+        <p class="text-white">{{ image.description }}</p>
       </div>
     </div>
   </div>
@@ -101,12 +102,21 @@ export default {
 .modal-slider-item {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   height: calc(100vh);
 }
 
 .modal-slider-item img {
   max-height: 100%;
+}
+
+.modal-slider-item p {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 5%;
+  background-color: rgb(0, 0, 0, 0.7);
 }
 
 .slider-control {
