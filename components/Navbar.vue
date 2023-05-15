@@ -12,19 +12,17 @@
 </template>
 
 <script>
-  const links = [
-    { name: "Home", link: "/" },
-    { name: "Gallery", link: "/gallery" },
-    { name: "News", link: "/news" },
-    { name: "About", link: "/about" },
-    { name: "Contact", link: "/contact" },
-  ];
-
-  export default {
-    setup() {
-      return {
-        links,
-      };
-    },
-  };
+export default {
+  data() {
+    return {
+      links: [
+        { name: "Home", link: "/" },
+        { name: "Gallery", link: "/gallery" },
+        { name: "News", link: "/news" },
+        { name: "About", link: "/about" },
+        { name: "Contact", link: "/contact" },
+      ]
+    };
+  },
+};
 </script>
